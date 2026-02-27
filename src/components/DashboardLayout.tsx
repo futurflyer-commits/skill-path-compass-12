@@ -8,10 +8,9 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const sidebarLinks = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
-  { icon: GitBranch, label: "Career Path", href: "/path-simulator" },
   { icon: Network, label: "Skill Graph", href: "/skill-graph" },
   { icon: Target, label: "Role Matches", href: "/roles" },
-  { icon: Route, label: "Path Simulator", href: "/path-simulator" },
+  { icon: Route, label: "Career Path Simulator", href: "/path-simulator" },
   { icon: BookOpen, label: "Learning Plan", href: "/learning" },
   { icon: Award, label: "Persona Badge", href: "/persona-badge" },
   { icon: Settings, label: "Settings", href: "#" },
