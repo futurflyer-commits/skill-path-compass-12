@@ -90,21 +90,24 @@ const PathSimulator = () => {
                   <p className="text-sm font-semibold text-success">+42% from current</p>
                 </div>
               </div>
-              <div className="mt-6 flex items-end gap-3 h-32">
+              <div className="mt-6 flex items-end gap-3 h-40">
                 {[
-                  { year: "Year 0", h: 30 },
-                  { year: "Year 1", h: 45 },
-                  { year: "Year 2", h: 60 },
-                  { year: "Year 3", h: 80 },
-                  { year: "Year 5", h: 100 },
+                  { year: "Year 0", h: 30, salary: "₹65L" },
+                  { year: "Year 1", h: 45, salary: "₹82L" },
+                  { year: "Year 2", h: 60, salary: "₹1.05Cr" },
+                  { year: "Year 3", h: 80, salary: "₹1.40Cr" },
+                  { year: "Year 5", h: 100, salary: "₹1.85Cr" },
                 ].map((bar) => (
                   <div key={bar.year} className="flex flex-1 flex-col items-center gap-1">
-                    <motion.div
-                      initial={{ height: 0 }}
-                      animate={{ height: `${bar.h}%` }}
-                      transition={{ delay: 0.3, duration: 0.5 }}
-                      className="w-full rounded-t-lg bg-primary/70"
-                    />
+                    <span className="text-[10px] font-semibold text-primary">{bar.salary}</span>
+                    <div className="w-full flex-1 flex items-end">
+                      <motion.div
+                        initial={{ height: 0 }}
+                        animate={{ height: `${bar.h}%` }}
+                        transition={{ delay: 0.3, duration: 0.5 }}
+                        className="w-full rounded-t-lg bg-gradient-to-t from-primary/50 to-primary"
+                      />
+                    </div>
                     <span className="text-[10px] text-muted-foreground uppercase">{bar.year}</span>
                   </div>
                 ))}
@@ -123,8 +126,8 @@ const PathSimulator = () => {
 
               <div className="mt-4 space-y-4">
                 {[
-                  { label: "Relocate to US Market", desc: "Increases average salary by 35%", defaultOn: true },
-                  { label: "Python Mastery", desc: "Skip the Year 1.5 certification" },
+                  { label: "Relocate to other Cities", desc: "Increases average salary by 35%", defaultOn: true },
+                  { label: "AI Mastery", desc: "Skip the Year 1.5 certification" },
                   { label: "Managerial Focus", desc: "Prioritize Soft Skills path" },
                 ].map((toggle) => (
                   <div key={toggle.label} className="flex items-start justify-between">
