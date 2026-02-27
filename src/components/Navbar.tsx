@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
+  { label: "Problem", href: "/#problem" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Pricing", href: "#" },
   { label: "Resources", href: "#" },
@@ -25,8 +26,8 @@ const Navbar = () => {
     <nav
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-border/40 bg-background/90 backdrop-blur-2xl shadow-sm"
-          : "bg-background/60 backdrop-blur-xl"
+          ? "border-b border-border/40 bg-background/70 backdrop-blur-2xl shadow-sm"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
@@ -34,7 +35,7 @@ const Navbar = () => {
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary shadow-sm">
             <Compass className="h-5 w-5 text-primary-foreground" />
           </div>
-          <span className="font-heading text-xl font-bold text-primary-foreground drop-shadow-sm">Futurefly</span>
+          <span className="font-heading text-xl font-bold text-foreground">Futurefly</span>
         </Link>
 
         {isLanding && (
@@ -43,7 +44,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="group relative text-sm font-medium text-primary-foreground/70 transition-colors duration-200 hover:text-primary-foreground"
+                className="group relative text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-primary transition-all duration-300 group-hover:w-full" />
