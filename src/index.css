@@ -51,16 +51,12 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 221 83% 53%;
 
-    --gradient-hero: linear-gradient(160deg, hsl(230 40% 8%) 0%, hsl(245 50% 14%) 40%, hsl(221 60% 18%) 70%, hsl(250 40% 12%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(250 60% 58%) 50%, hsl(280 60% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(213 100% 95%) 0%, hsl(250 60% 95%) 50%, hsl(0 0% 100%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(250 60% 58%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(213 100% 98%) 100%);
-    --gradient-glow: radial-gradient(ellipse 60% 40% at 50% 0%, hsl(221 83% 53% / 0.15) 0%, transparent 70%);
-    --gradient-section-alt: linear-gradient(180deg, hsl(220 14% 97%) 0%, hsl(220 14% 96%) 100%);
 
     --shadow-card: 0 1px 3px hsl(220 13% 91% / 0.5), 0 4px 16px hsl(220 13% 91% / 0.3);
     --shadow-elevated: 0 4px 24px hsl(221 83% 53% / 0.08), 0 8px 48px hsl(221 83% 53% / 0.04);
-    --shadow-premium: 0 8px 40px hsl(221 83% 53% / 0.12), 0 2px 8px hsl(221 83% 53% / 0.06);
-    --shadow-glow: 0 0 60px hsl(221 83% 53% / 0.2), 0 0 120px hsl(250 60% 58% / 0.1);
 
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'DM Sans', sans-serif;
@@ -128,14 +124,6 @@
     background: var(--gradient-cta);
   }
 
-  .bg-section-alt {
-    background: var(--gradient-section-alt);
-  }
-
-  .bg-glow {
-    background: var(--gradient-glow);
-  }
-
   .shadow-card {
     box-shadow: var(--shadow-card);
   }
@@ -144,27 +132,8 @@
     box-shadow: var(--shadow-elevated);
   }
 
-  .shadow-premium {
-    box-shadow: var(--shadow-premium);
-  }
-
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
-  }
-
   .glass-panel {
     @apply bg-card/80 backdrop-blur-xl border border-border/50;
     box-shadow: var(--shadow-card);
-  }
-
-  .card-premium {
-    @apply rounded-2xl border border-border/60 bg-card p-8 transition-all duration-300;
-    box-shadow: var(--shadow-card);
-  }
-
-  .card-premium:hover {
-    box-shadow: var(--shadow-premium);
-    transform: translateY(-2px);
-    border-color: hsl(var(--primary) / 0.2);
   }
 }
